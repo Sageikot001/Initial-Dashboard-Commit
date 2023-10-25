@@ -6,9 +6,8 @@ import {
   ChartComponent
 } from "@syncfusion/ej2-react-charts";
 
-class SparkLine extends React.PureComponent {
-  render() {
-  const { id, height, width, color, data, type, currentColor } = this.props;
+
+  const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {
   
   return (
     <SparklineComponent
@@ -35,5 +34,5 @@ class SparkLine extends React.PureComponent {
     </SparklineComponent>
   );
 };
-}
+
 export default SparkLine;
