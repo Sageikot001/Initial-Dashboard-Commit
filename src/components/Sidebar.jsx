@@ -40,7 +40,9 @@ const Sidebar = () => {
                 onClick={handleCloseSideBar}
                 className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:white text-slate-900"
               >
-                <SiShopware /> <span>Pixel</span>
+                <img src="/pixellogo.svg" alt="Pixel" className="w-[100px] h-[100px] rounded-full border-1" /> 
+                
+                {/* <span>Pixel</span> */}
               </Link>
               <TooltipComponent content="Menu" position="BottomCenter">
                 <button

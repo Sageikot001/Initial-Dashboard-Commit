@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { SiShopware } from 'react-icons/si';
+
 
 import './index.css';
 import App from './App';
