@@ -12,10 +12,18 @@ const Sidebar = () => {
     useStateContext();
 
   const handleCloseSideBar = () => {
-    if (activeMenu && screenSize <= 900) {
+    if (activeMenu && screenSize <= 900) 
+    {
       setActiveMenu(false);
     }
+  };                                                                                                                                                
+
+  const handleToggleSideBar = () => {
+    // Implement the logic to toggle the sidebar
+    setActiveMenu((prevActiveMenu) => !prevActiveMenu);
   };
+
+  const sidebarClass = activeMenu ? "w-full" : "w-16"; // Change the width based on activeMenu state
 
   const activeLink =
     "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
@@ -26,7 +34,7 @@ const Sidebar = () => {
       <>
         {activeMenu && (
           <div className={`ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 ${activeMenu ? 'active' : ''}`}>
-            <div className="flex justify-between items-center">
+            <div className={`flex justify-between items-center ${sidebarClass}`}>
               <Link
                 to="/"
                 onClick={handleCloseSideBar}
@@ -37,7 +45,7 @@ const Sidebar = () => {
               <TooltipComponent content="Menu" position="BottomCenter">
                 <button
                   type="button"
-                  onClick={handleToggleSidebar}
+                  onClick={handleToggleSideBar}
                   className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
                 >
                   <MdOutlineCancel />
